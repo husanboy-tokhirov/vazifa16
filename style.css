@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #141C24;
+}
+.container {
+    padding: 0 24px;
+    box-sizing: content-box;
+    max-width: 700px;
+    margin: 0 auto ;
+}
+.content-text h1{
+    font-family: "Aire Exterior";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: right;
+    color: #fff;
+}
+.content-text{
+    display: flex;
+    gap: 72px;
+}
+.content-img{
+    padding: 125px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+}
+
+@media only screen and(max-width:700px) {
+    .container{
+        padding: 0 24px;
+    }
+}
+@media only screen and (max-width:563px) {
+    .content-text{
+        /* max-width: 262px; */
+        font-size: 40px;
+        font-weight: 400px;
+    }
+
+    .content-img{
+        /* align-content: center;
+        justify-content: center; */
+        display: grid;
+        justify-items: center;
+        gap: 30px 0px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width:360px) {
+    .content-img{
+        gap: 30px 0px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        justify-items: center;
+    }
+    .content-text{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
